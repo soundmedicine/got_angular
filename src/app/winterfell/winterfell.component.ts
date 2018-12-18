@@ -24,7 +24,7 @@ export class WinterfellComponent implements OnInit {
   }
 
   getStuff(){
-    this.regions.getData().subscribe(payload=>{
+    this.regions.getData(this.where_i_am).subscribe(payload=>{
       this.zone = payload;
     })
   }
