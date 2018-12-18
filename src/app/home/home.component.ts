@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MyserviceService } from '../myservice.service'
 
 @Component({
   selector: 'app-home',
@@ -6,10 +7,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
+  initial:string = "Roberto"
 
-  constructor() { }
+  constructor(private srv:MyserviceService) { }
 
   ngOnInit() {
+    this.initial = this.srv.getStuff();
   }
 
 }
