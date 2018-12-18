@@ -1,5 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Optional } from '@angular/core';
 import {RegionsService} from '../regions.service';
+import { ActivatedRoute } from '@angular/router';
+
 
 @Component({
   selector: 'app-winterfell',
@@ -7,21 +9,23 @@ import {RegionsService} from '../regions.service';
   styleUrls: ['./winterfell.component.scss']
 })
 export class WinterfellComponent implements OnInit {
-  initialValue:string = "Sansa"; 
-  fruits =["apple", "orange", "peach"];
-  shown:boolean = true;
+  where_i_am:any;
 
-  zones:Object;
+  zone:Object;
+  money:number = 5.55;
 
-  constructor(private regions:RegionsService) { }
+  constructor(private regions:RegionsService, private route: ActivatedRoute) { }
 
   ngOnInit() {
-   this.getStuff();
+  this.where_i_am= this.route.snapshot.routeConfig.path;
+  console.log("where am I ? ", this.where_i_am);
+  
+  this.getStuff();
   }
 
   getStuff(){
     this.regions.getData().subscribe(payload=>{
-      this.zones = payload;
+      this.zone = payload;
     })
   }
  

@@ -1,18 +1,15 @@
+
  
-  <div *ngFor="let fruit of fruits">
-      {{fruit}}
+  <div *ngIf="zone">
+      <h1>{{zone.name}}</h1>
+             
+      <div class="image_container" *ngFor="let image of zone.images">
+          {{image.id}} | 
+          <img src={{image.url}} >
+          {{image.created_at}} 
+      </div>
   </div>
- 
-  <ul>
-    <li *ngFor="let fruit of zones.data">
-       
-        {{fruit.id}} | 
-         {{fruit.name}}  | 
-         {{fruit.region}} 
-     
-      
-    </li>
-  </ul>
+  
 
 
  
