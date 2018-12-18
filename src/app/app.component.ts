@@ -7,4 +7,15 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'westeros';
+
+  counter:number = 0;
+  
+  speak(){
+    alert ( "A man has no data. "); 
+  }
+
+  bump(){
+    this.counter++; 
+  }
+  
 }
