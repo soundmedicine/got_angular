@@ -13,7 +13,8 @@ const routes: Routes = [
   {path: "braavos", component: BraavosComponent},
   {path: "dorne", component: DorneComponent},
   {path: "essos", component: EssosComponent},
-  {path: "winterfell", component: WinterfellComponent}
+  {path: "winterfell", component: WinterfellComponent},
+  {path: "place", component: PlaceComponent}
 ];
 
 @NgModule({

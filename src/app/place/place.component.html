@@ -1,3 +1,10 @@
-<p>
-  place works!
-</p>
+ 
+  <div *ngIf="zone">
+    <h1>{{zone.name}}</h1>
+           
+    <div class="image_container" *ngFor="let image of zone.images">
+        {{image.id}} | 
+        <img src={{image.url}} >
+        {{image.created_at}} 
+    </div>
+</div>

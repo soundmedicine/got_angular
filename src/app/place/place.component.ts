@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {RegionsService} from '../regions.service';
 import { ActivatedRoute } from '@angular/router';
 
+
 @Component({
   selector: 'app-place',
   templateUrl: './place.component.html',
@@ -14,7 +15,6 @@ export class PlaceComponent implements OnInit {
   money:number = 5.55;
 
   constructor(private regions:RegionsService, private route: ActivatedRoute) { }
-
 
   ngOnInit() {
     this.where_i_am= this.route.snapshot.routeConfig.path;
