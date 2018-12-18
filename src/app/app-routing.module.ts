@@ -5,6 +5,7 @@ import {BraavosComponent} from './braavos/braavos.component';
 import {DorneComponent} from './dorne/dorne.component';
 import {EssosComponent} from './essos/essos.component';
 import {WinterfellComponent} from './winterfell/winterfell.component';
+import {PlaceComponent} from './place/place.component';
 
 
 const routes: Routes = [

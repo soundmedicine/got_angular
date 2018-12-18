@@ -12,6 +12,7 @@ import { DorneComponent } from './dorne/dorne.component';
 import { WinterfellComponent } from './winterfell/winterfell.component';
 import { EssosComponent } from './essos/essos.component';
 import { HomeComponent } from './home/home.component';
+import { PlaceComponent } from './place/place.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { HomeComponent } from './home/home.component';
     DorneComponent,
     WinterfellComponent,
     EssosComponent,
-    HomeComponent
+    HomeComponent,
+    PlaceComponent
   ],
   imports: [
     BrowserModule,
