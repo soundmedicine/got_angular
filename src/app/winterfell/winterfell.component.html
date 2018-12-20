@@ -1,7 +1,7 @@
 
  
   <div *ngIf="zone">
-      <h1>{{zone.name}}</h1>
+            <h1>{{zone.name | titlecase}}</h1>
              
       <div class="image_container" *ngFor="let image of zone.images">
           {{image.id}} | 
